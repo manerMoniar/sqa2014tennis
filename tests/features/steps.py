@@ -13,9 +13,9 @@ def when_group1_and_group2_start_a_match_to_group3_sets(step, group1, group2, gr
     assert False, 'This step must be implemented'
 
 
-@step(u'Then: I see score: "([^"]*)"')
+@step(u'I see score: "([^"]*)"')
 def then_i_see_score_group1(step, group1):
-    assert False, 'This step must be implemented'
+    assert world.match.score() == group1 , 'Error got: ' + world.match.score()
 
 
 @step(u'When: "([^"]*)" won the "([^"]*)" set "([^"]*)"-"([^"]*)"')
