@@ -7,8 +7,6 @@ before_script:
   - "flake8 --ignore=E501,F403 app tests "
 # command to run tests
 script: 
-  - coverage run 
   - lettuce tests
   - nosetests --with-doctest --with-coverage -s app
 after_script:
-  - coverage report
