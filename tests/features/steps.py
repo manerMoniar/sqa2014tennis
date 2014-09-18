@@ -8,16 +8,10 @@ def given_p1_and_p2_start_a_match_to_pacted_sets(step, p1, p2, pacted_sets):
     world.match = m.Match(p1, p2, pacted_sets)
 
 
-<<<<<<< HEAD
 @step(u'Then: I see score: "([^"]*)"')
 def then_i_see_score(step, score):
     assert world.match.show_score() == score, \
         "Got %s" % world.match.show_score()
-=======
-@step(u'I see score: "([^"]*)"')
-def then_i_see_score_group1(step, group1):
-    assert world.match.score() == group1 , 'Error got: ' + world.match.score()
->>>>>>> upstream/master
 
 
 @step(u'When: "([^"]*)" won the "([^"]*)" set "([^"]*)"-"([^"]*)"')
